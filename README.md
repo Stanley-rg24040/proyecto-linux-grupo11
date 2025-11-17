@@ -125,9 +125,9 @@ Se subió el proyecto a GitHub:
 git push -u origin main
 
 
-#🟦 4 DOCKER
+# 4. DOCKER
 
-4.1 Instalación de Docker
+## 4.1 Instalación de Docker
 Comandos ejecutados:
 
 -sudo apt update
@@ -141,16 +141,16 @@ sudo usermod -aG docker adminsys
 sudo usermod -aG docker tecnico
 getent group docker
 
-4.2 Verificación Inicial
+## 4.2 Verificación Inicial
 
 Ejecución del Contenedor de Prueba
 Para validar la instalación:
 docker run hello-world
 docker ps -a
 
-#🟦 5 SERVIDOR WEB CONTAINERIZADO 
+#  5 SERVIDOR WEB CONTAINERIZADO 
 
-5.1 Contenedor Nginx Básico
+## 5.1 Contenedor Nginx Básico
 
 Configuración del Servidor Web NGINX
 Creación de directorio y archivo HTML:
@@ -169,7 +169,7 @@ Comando de verificación:
 curl http://localhost:8080
 
 
-5.2 Verificación del Servicio Web:
+## 5.2 Verificación del Servicio Web:
 -logs de verificación
 -docker logs web-nginx
 
