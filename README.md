@@ -125,12 +125,53 @@ Se subió el proyecto a GitHub:
 git push -u origin main
 
 
+#🟦 4 DOCKER
+
+4.1 Instalación de Docker
+Comandos ejecutados:
+
+-sudo apt update
+-sudo apt install -y docker.io
+-sudo systemctl enable --now docker
+-systemctl status Docker
+
+-- Configuración de Permisos para Usuarios
+Usuarios agregados al grupo docker:
+sudo usermod -aG docker adminsys
+sudo usermod -aG docker tecnico
+getent group docker
+
+4.2 Verificación Inicial
+
+Ejecución del Contenedor de Prueba
+Para validar la instalación:
+docker run hello-world
+docker ps -a
+
+#🟦 5 SERVIDOR WEB CONTAINERIZADO 
+
+5.1 Contenedor Nginx Básico
+
+Configuración del Servidor Web NGINX
+Creación de directorio y archivo HTML:
+sudo mkdir -p /proyecto/web
+echo "<h1>Servidor NGINX en Docker - Grupo 11</h1>" | sudo tee /proyecto/web/index.html
+cat /proyecto/web/index.html
+Despliegue del contenedor NGINX:
+docker run -d \
+  --name web-nginx \
+  -p 8080:80 \
+  -v /proyecto/web:/usr/share/nginx/html:ro \
+  nginx:latest
 
 
+Comando de verificación:
+curl http://localhost:8080
 
 
-
-
+5.2 Verificación del Servicio Web:
+-logs de verificación
+-docker logs web-nginx
 
 
 
