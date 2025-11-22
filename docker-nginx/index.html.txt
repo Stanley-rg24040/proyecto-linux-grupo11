@@ -1,0 +1,2 @@
+<h1>Servidor NGINX en Docker - Grupo 11</h1>
+<p>Servidor web containerizado usando Docker y NGINX.</p>
